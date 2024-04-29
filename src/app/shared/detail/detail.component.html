@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header">
+    <h1>{{ data.day }}</h1>
+    <button (click)="close()">X</button>
+  </div>
+
+  <div class="content">
+    <div class="gauge-wrapper">
+      <ngx-gauge
+        [type]="'arch'"
+        [value]="data.humidity"
+        [label]="'Humidity'"
+        [append]="'%'"
+      >
+      </ngx-gauge>
+    </div>
+    <div class="value-wrapper">
+      <p>Temperature: {{ data.temperature }}</p>
+      <p>Pressure: {{ data.pressure }}</p>
+      <p>Humidity: {{ data.humidity }}</p>
+      <p>Dew point: {{ data.dew_point }}</p>
+    </div>
+  </div>
+</div>
